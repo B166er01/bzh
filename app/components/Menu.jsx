@@ -144,7 +144,20 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             className="relative text-5xl opacity-0 font-creamCake"
             onClick={() => setMenuOpen(false)}
           >
-            <a href="#blue">Breizh Cola</a>
+            <a href="#blue" className="flex items-center">
+              <svg
+                viewBox="0 0 100 100"
+                className="star"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="M50 10 L61.8 35.4 L89.5 39.1 L68 60.4 L71.6 87.5 L50 72.6 L28.4 87.5 L32 60.4 L10.5 39.1 L38.2 35.4 Z"
+                  fill="#450a0a"
+                />
+              </svg>
+              <div className="ml-3">Breizh Cola</div>
+            </a>
           </div>
           <div
             ref={crossRef}

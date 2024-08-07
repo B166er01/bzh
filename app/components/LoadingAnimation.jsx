@@ -18,11 +18,7 @@ const LoadingAnimation = () => {
     const path = starPathRef.current;
 
     gsap
-      .timeline({
-        onComplete: () => {
-          document.body.style.overflow = "auto";
-        },
-      })
+      .timeline({})
       .to(path, { display: "inline" })
       .to(path, { strokeDashoffset: 0, duration: 1, ease: "power1.inOut" })
       .to(
