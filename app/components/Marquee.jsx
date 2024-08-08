@@ -59,7 +59,7 @@ const Marquee = () => {
   };
 
   return (
-    <div className="relative flex h-[33vh] w-full overflow-hidden bg-myWhite ">
+    <div className="relative flex h-[50vh] w-full overflow-hidden bg-myWhite ">
       <div className="absolute z-0 -translate-x-3 top-2/4 border-y-2 border-myRed rotate-3 border-skin-border bg-myWhite">
         <div
           ref={slider}
