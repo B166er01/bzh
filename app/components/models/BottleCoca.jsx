@@ -10,48 +10,13 @@ export function BottleCoca(props) {
   const bottleRef = useRef();
   const { nodes, materials } = useGLTF("/model/bottleCoca.glb");
 
-  useEffect(() => {
-    // Setup ScrollTrigger
-    ScrollTrigger.create({
-      trigger: "#blue",
-      start: "center 70%", // Start the animation when the center of the container is in the center of the viewport
-      end: "center 70%",
-      markers: true,
-      onEnter: () => animateBottle(true),
-      onLeaveBack: () => animateBottle(false),
-    });
-
-    const animateBottle = (entering) => {
-      gsap
-        .timeline()
-        .to(
-          bottleRef.current.position,
-          {
-            x: entering ? 50 : 120,
-            duration: 1,
-            ease: "power4.out",
-          },
-          "one"
-        )
-        .to(
-          bottleRef.current.rotation,
-          {
-            y: entering ? Math.PI * 2 : 0,
-            duration: 1,
-            ease: "power4.out",
-          },
-          "one"
-        );
-    };
-  }, []);
-
   return (
     <group
       ref={bottleRef}
       {...props}
       dispose={null}
       scale={170}
-      position={[120, -30, 0]}
+      position={[0, -30, 0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.047}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

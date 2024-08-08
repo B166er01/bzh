@@ -8,9 +8,12 @@ import { BottleCoca } from "./models/BottleCoca";
 
 const BreizhThe = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-screen">
-      <Canvas tyle={{ pointerEvents: "none" }}>
-        <Suspense>
+    <div
+      className="absolute top-0 left-0 w-full h-screen pointer-events-none"
+      style={{ pointerEvents: "none" }}
+    >
+      <Canvas id="toto" style={{ pointerEvents: "none" }}>
+        {/* <Suspense>
           <Environment preset="sunset" />
           <OrthographicCamera makeDefault zoom={10} position={[0, 0, 50]} />
           <Float
@@ -21,7 +24,7 @@ const BreizhThe = () => {
           >
             <BottleCoca />
           </Float>
-        </Suspense>
+        </Suspense> */}
       </Canvas>
     </div>
   );

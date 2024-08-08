@@ -21,3 +21,14 @@ body{
   stroke-dashoffset: 280;
   stroke-dasharray: 280;
 }
+
+canvas{
+  pointer-events: none;
+}
+#toto{
+  pointer-events: none;
+}
+
+#titi > div{
+  pointer-events: none;
+}
