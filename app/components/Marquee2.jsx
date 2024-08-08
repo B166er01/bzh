@@ -27,10 +27,6 @@ const Marquee2 = () => {
     });
 
     requestAnimationFrame(animate);
-
-    return () => {
-      // Clean up any resources if needed
-    };
   }, []);
 
   useEffect(() => {
