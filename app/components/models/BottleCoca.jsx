@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, memo } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,13 +10,39 @@ export function BottleCoca(props) {
   const bottleRef = useRef();
   const { nodes, materials } = useGLTF("/model/bottleCoca.glb");
 
+  useEffect(() => {
+    if (bottleRef.current) {
+      gsap.to(bottleRef.current.position, {
+        x: 68, // Target x position
+        scrollTrigger: {
+          trigger: "#blue", // The element that triggers the animation
+          start: "top 40%", // Start the animation when the top of #blue is 40% from the top of the viewport
+
+          markers: true, // Optional: Show markers for debugging
+        },
+        duration: 1.5, // Duration of the animation
+      });
+
+      gsap.to(bottleRef.current.rotation, {
+        y: Math.PI, // Target y rotation (180 degrees)
+        scrollTrigger: {
+          trigger: "#blue", // The element that triggers the animation
+          start: "top 40%", // Start the animation when the top of #blue is 40% from the top of the viewport
+
+          markers: true, // Optional: Show markers for debugging
+        },
+        duration: 1.5, // Duration of the animation
+      });
+    }
+  }, []);
+
   return (
     <group
       ref={bottleRef}
       {...props}
       dispose={null}
       scale={190}
-      position={[60, -30, 0]}
+      position={[120, -30, 0]}
     >
       <group rotation={[-Math.PI / 2, Math.PI / 16, 0]} scale={0.047}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

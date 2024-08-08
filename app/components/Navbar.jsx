@@ -43,11 +43,11 @@ const Navbar = ({ setMenuOpen }) => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 z-10 flex items-center justify-between w-full h-20 px-6 bg-myRed text-myWhite"
+      className="fixed top-0 left-0 z-30 flex items-center justify-between w-full h-20 px-6 bg-myRed text-myWhite"
     >
       <a
         href="#"
-        className="text-5xl font-creamCake flex items-center cursor-pointer"
+        className="flex items-center text-5xl cursor-pointer font-creamCake"
       >
         <svg viewBox="0 0 100 100" className="star" width="40" height="40">
           <path
