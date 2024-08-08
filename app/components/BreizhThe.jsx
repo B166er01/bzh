@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 
 import { BeerBottle } from "./models/BeerBottle";
+import { BottleCoca } from "./models/BottleCoca";
 
 const BreizhThe = () => {
   return (
@@ -12,7 +13,7 @@ const BreizhThe = () => {
         <Suspense>
           <Environment preset="sunset" />
           <OrthographicCamera makeDefault zoom={10} position={[0, 0, 50]} />
-          <BeerBottle />
+          <BottleCoca />
         </Suspense>
       </Canvas>
     </div>
