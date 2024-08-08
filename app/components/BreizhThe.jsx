@@ -9,7 +9,7 @@ import { BottleCoca } from "./models/BottleCoca";
 const BreizhThe = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-screen">
-      <Canvas>
+      <Canvas tyle={{ pointerEvents: "none" }}>
         <Suspense>
           <Environment preset="sunset" />
           <OrthographicCamera makeDefault zoom={10} position={[0, 0, 50]} />
