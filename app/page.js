@@ -7,6 +7,7 @@ import Section from "./components/Section";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Test from "./components/Test";
+import Marquee2 from "./components/Marquee2";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       <Navigation />
       <Section />
       <Screen />
-      <Marquee />
+      <Marquee2 />
+      {/* <Marquee /> */}
       {/* <Experience /> */}
       <Footer />
       {/* <Test /> */}
