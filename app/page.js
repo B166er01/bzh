@@ -15,7 +15,6 @@ export default function Home() {
       <Section />
       <Screen />
       <Marquee />
-      <Screen />
       {/* <Experience /> */}
       <Footer />
     </main>

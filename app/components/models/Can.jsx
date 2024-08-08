@@ -14,8 +14,8 @@ export function Can(props) {
         trigger: "#blue",
         start: "top top",
         end: "bottom top",
-        // scrub: 0.9,
-        pin: true,
+        scrub: 0.9,
+        // pin: true,
         markers: true,
       },
     });
