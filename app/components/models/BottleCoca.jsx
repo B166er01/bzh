@@ -15,10 +15,10 @@ export function BottleCoca(props) {
       ref={bottleRef}
       {...props}
       dispose={null}
-      scale={170}
-      position={[30, -30, 0]}
+      scale={190}
+      position={[60, -30, 0]}
     >
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.047}>
+      <group rotation={[-Math.PI / 2, Math.PI / 16, 0]} scale={0.047}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
             <mesh
