@@ -18,7 +18,7 @@ export default function Home() {
       <Marquee />
       {/* <Experience /> */}
       <Footer />
-      <Test />
+      {/* <Test /> */}
     </main>
   );
 }

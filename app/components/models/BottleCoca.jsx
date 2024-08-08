@@ -16,7 +16,7 @@ export function BottleCoca(props) {
       {...props}
       dispose={null}
       scale={170}
-      position={[0, -30, 0]}
+      position={[30, -30, 0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.047}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
