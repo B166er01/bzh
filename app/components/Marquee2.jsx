@@ -22,9 +22,9 @@ const Marquee2 = () => {
     gsap.set(secondText.current, {
       left: secondText.current.getBoundingClientRect().width,
     });
-    // gsap.set(secondText2.current, {
-    //   left: secondText2.current.getBoundingClientRect().width,
-    // });
+    gsap.set(secondText2.current, {
+      left: secondText2.current.getBoundingClientRect().width,
+    });
 
     requestAnimationFrame(animate);
 
@@ -46,16 +46,16 @@ const Marquee2 = () => {
       },
     });
 
-    // gsap.to(slider2.current, {
-    //   scrollTrigger: {
-    //     trigger: document.documentElement,
-    //     scrub: 0.5,
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     pinSpacer: false,
-    //     onUpdate: (e) => (direction = e.direction * 1),
-    //   },
-    // });
+    gsap.to(slider2.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.5,
+        start: "top bottom",
+        end: "bottom top",
+        pinSpacer: false,
+        onUpdate: (e) => (direction = e.direction * 1),
+      },
+    });
 
     requestAnimationFrame(animate);
 
@@ -71,20 +71,19 @@ const Marquee2 = () => {
       xPercent = -100;
     }
     gsap.set(firstText.current, { xPercent: xPercent });
-    // gsap.set(secondText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
 
-    // if (xPercent2 < -100) {
-    //   xPercent2 = 0;
-    // }
-    // else if (xPercent2 > 0) {
-    //   xPercent2 = -100;
-    // }
+    if (xPercent2 < -100) {
+      xPercent2 = 0;
+    } else if (xPercent2 > 0) {
+      xPercent2 = -100;
+    }
     gsap.set(firstText2.current, { xPercent: xPercent2 });
-    // gsap.set(secondText2.current, { xPercent: xPercent2 });
+    gsap.set(secondText2.current, { xPercent: xPercent2 });
 
     requestAnimationFrame(animate);
     xPercent += 0.04 * direction;
-    // xPercent2 -= 0.04 * direction;
+    xPercent2 -= 0.04 * direction;
   };
 
   return (
@@ -93,33 +92,33 @@ const Marquee2 = () => {
         <div ref={slider} className="relative whitespace-nowrap">
           <p className="relative pr-5 m-0 uppercase text-7xl" ref={firstText}>
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
           <p
             className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase"
             ref={secondText}
           >
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
         </div>
       </div>
 
-      {/* <div className="absolute z-10 -translate-x-3 top-1/2 -rotate-6 border-y-2 border-skin-border ">
+      <div className="absolute z-10 -translate-x-3 top-1/2 -rotate-6 border-y-2 border-skin-border ">
         <div ref={slider2} className="relative z-20 whitespace-nowrap ">
           <p className="relative pr-5 m-0 uppercase text-7xl " ref={firstText2}>
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
           <p
             className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase "
             ref={secondText2}
           >
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
