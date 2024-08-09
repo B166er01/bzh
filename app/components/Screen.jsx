@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import BreizhThe from "./BreizhThe";
+import { useEffect, useRef } from "react";
+import BreizhCola from "./BreizhCola";
 import MagneticButtons from "./MagneticButtons";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,7 +51,7 @@ const Screen = () => {
       className="relative w-full h-screen bg-myWhite"
       ref={screenRef}
     >
-      <BreizhThe />
+      <BreizhCola />
 
       <MagneticButtons>
         <button className="relative duration-300 -rotate-6 border-myRed h-[220px] text-6xl uppercase rounded-[50%] cursor-pointer w-[440px] bg-myWhite border transition-colors font-bold text-myRed hover:text-myWhite hover:bg-myRed top-[50%] left-1/2 ">

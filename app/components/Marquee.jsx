@@ -3,7 +3,6 @@ import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-gsap.registerPlugin(ScrollTrigger);
 
 const Marquee = () => {
   const firstText = useRef(null);
@@ -11,22 +10,17 @@ const Marquee = () => {
   const slider = useRef(null);
 
   let xPercent = 0;
-
   let direction = -1;
 
   useEffect(() => {
     gsap.set(secondText.current, {
       left: secondText.current.getBoundingClientRect().width,
     });
-
     requestAnimationFrame(animate);
-
-    return () => {
-      // Clean up any resources if needed
-    };
   }, []);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
@@ -37,12 +31,7 @@ const Marquee = () => {
         onUpdate: (e) => (direction = e.direction * 1),
       },
     });
-
     requestAnimationFrame(animate);
-
-    return () => {
-      // Clean up any resources if needed
-    };
   }, []);
 
   const animate = () => {
@@ -55,25 +44,23 @@ const Marquee = () => {
     gsap.set(secondText.current, { xPercent: xPercent });
 
     requestAnimationFrame(animate);
-    xPercent -= 0.04 * direction;
+    xPercent += 0.04 * direction;
   };
 
   return (
-    <div className="relative flex h-[50vh] w-full overflow-hidden bg-myWhite ">
-      <div className="absolute z-0 -translate-x-3 top-2/4 border-y-2 border-myRed rotate-3 border-skin-border bg-myWhite">
-        <div
-          ref={slider}
-          className="relative capitalize whitespace-nowrap font-creamCake text-8xl text-myRed"
-        >
-          <p className="relative pr-5 m-0 " ref={firstText}>
+    <div className="relative flex h-[50vh] w-full overflow-hidden ">
+      <div className="absolute z-10 -translate-x-3 top-2/4 border-y-2 rotate-3 border-skin-border">
+        <div ref={slider} className="relative whitespace-nowrap">
+          <p className="relative pr-5 m-0 uppercase text-7xl" ref={firstText}>
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
-            - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
-          <p className="absolute top-0 left-[100%] m-0 pr-5 " ref={secondText}>
+          <p
+            className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase"
+            ref={secondText}
+          >
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
-            - breizh cola -
+            blackbird studio - blackbird studio - blackbird studio -
           </p>
         </div>
       </div>

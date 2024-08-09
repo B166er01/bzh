@@ -42,7 +42,7 @@ const Section = () => {
   return (
     <div
       id="landing"
-      className="flex flex-col justify-center w-full h-screen pt-20 font-bold uppercase pl-28 bg-myRed text-myWhite"
+      className="flex flex-col justify-center w-full h-screen pt-20 font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
     >
       <div className="flex overflow-hidden">
         <div
