@@ -1,6 +1,7 @@
 "use client";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import BreizhHome from "../experience/view/BreizhHome";
 
 const Landing = () => {
   const titleRef = useRef(null);
@@ -42,8 +43,9 @@ const Landing = () => {
   return (
     <div
       id="landing"
-      className="flex flex-col justify-center w-full h-screen pt-20 font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
+      className="relative flex flex-col justify-center w-full h-screen pt-20 overflow-hidden font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
     >
+      <BreizhHome />
       <div className="flex overflow-hidden">
         <div
           ref={titleRef}
