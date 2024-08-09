@@ -16,24 +16,6 @@ export function B1(props) {
 
   const b1Ref = useRef(null);
 
-  useEffect(() => {
-    // Create a GSAP timeline
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#landing",
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-        markers: true,
-      },
-    });
-
-    // Animate the position of the can
-    tl.to(b1Ref.current.position, {
-      x: -150,
-      ease: "power4.out",
-    });
-  }, []);
   return (
     <group
       ref={b1Ref}
@@ -41,6 +23,7 @@ export function B1(props) {
       dispose={null}
       scale={83}
       position={[50, -37, 0]}
+      id="zz"
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.161}>
         <mesh

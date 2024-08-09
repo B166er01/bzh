@@ -23,14 +23,10 @@ const Landing = () => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: landingRef.current,
-        scrub: true,
-        // pinSpacing: true,
-        // pinSpacer: true,
         pin: true,
-
         start: "top top",
         end: "bottom top",
-        // markers: true,
+        pinSpacer: false,
       },
     });
 
