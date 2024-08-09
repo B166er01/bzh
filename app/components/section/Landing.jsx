@@ -27,8 +27,7 @@ const Landing = () => {
         // pinSpacing: true,
         // pinSpacer: true,
         pin: true,
-        pinSpacer: false,
-        pinSpacing: true, // If you don't want the extra space
+
         start: "top top",
         end: "bottom top",
         // markers: true,
