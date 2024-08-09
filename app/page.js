@@ -1,9 +1,9 @@
-import Footer from "./components/sections/Footer";
-import LoadingAnimation from "./components/sections/LoadingAnimation";
+import LoadingAnimation from "./components/section/LoadingAnimation";
 import Marquee from "./components/Marquee";
 import Navigation from "./components/Navigation";
-import Landing from "./components/sections/Landing";
-import Screen from "./components/sections/Screen";
+import Footer from "./components/section/Footer";
+import Landing from "./components/section/Landing";
+import ProductOriginal from "./components/section/ProductOriginal";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <LoadingAnimation />
       <Navigation />
       <Landing />
-      <Screen />
+      <ProductOriginal />
       <Marquee />
       <Footer />
     </main>

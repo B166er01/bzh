@@ -3,12 +3,12 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import BreizhCola from "../experience/view/BreizhCola";
 import MagneticButtons from "../MagneticButtons";
+import BreizhCola from "../experience/view/BreizhCola";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Screen = () => {
+const ProductOriginal = () => {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
@@ -52,7 +52,6 @@ const Screen = () => {
       ref={screenRef}
     >
       <BreizhCola />
-
       <MagneticButtons>
         <button className="relative duration-300 -rotate-6 border-myRed h-[220px] text-6xl uppercase rounded-[50%] cursor-pointer w-[440px] bg-myWhite border transition-colors font-bold text-myRed hover:text-myWhite hover:bg-myRed top-[50%] left-1/2 ">
           découvrez le
@@ -104,4 +103,4 @@ const Screen = () => {
   );
 };
 
-export default Screen;
+export default ProductOriginal;
