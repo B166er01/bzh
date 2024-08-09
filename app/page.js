@@ -1,7 +1,7 @@
 import LoadingAnimation from "./components/LoadingAnimation";
 import Screen from "./components/Screen";
 import Navigation from "./components/Navigation";
-import Section from "./components/Section";
+import Landing from "./components/Landing";
 import Footer from "./components/Footer";
 import Marquee from "./components/Marquee";
 
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="">
       <LoadingAnimation />
       <Navigation />
-      <Section />
+      <Landing />
       <Screen />
       <Marquee />
       <Footer />

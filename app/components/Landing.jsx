@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
-const Section = () => {
+const Landing = () => {
   const titleRef = useRef(null);
   const title2Ref = useRef(null);
   const title3Ref = useRef(null);
@@ -87,4 +87,4 @@ const Section = () => {
   );
 };
 
-export default Section;
+export default Landing;

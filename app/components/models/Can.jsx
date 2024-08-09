@@ -11,11 +11,11 @@ export function Can(props) {
     // Create a GSAP timeline
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#blue",
+        trigger: "#landing",
         start: "top top",
         end: "bottom top",
         scrub: 0.9,
-        // pin: true,
+        pin: true,
         markers: true,
       },
     });

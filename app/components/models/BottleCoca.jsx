@@ -17,8 +17,6 @@ export function BottleCoca(props) {
         scrollTrigger: {
           trigger: "#blue", // The element that triggers the animation
           start: "top 40%", // Start the animation when the top of #blue is 40% from the top of the viewport
-
-          markers: true, // Optional: Show markers for debugging
         },
         duration: 1.5, // Duration of the animation
       });
@@ -28,8 +26,6 @@ export function BottleCoca(props) {
         scrollTrigger: {
           trigger: "#blue", // The element that triggers the animation
           start: "top 40%", // Start the animation when the top of #blue is 40% from the top of the viewport
-
-          markers: true, // Optional: Show markers for debugging
         },
         duration: 1.5, // Duration of the animation
       });

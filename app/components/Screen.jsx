@@ -15,7 +15,7 @@ const Screen = () => {
   const ref4 = useRef(null);
   const ref5 = useRef(null);
   const ref6 = useRef(null);
-  const ref7 = useRef(null); // Add this ref
+  const ref7 = useRef(null);
   const screenRef = useRef(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Screen = () => {
       .timeline({
         scrollTrigger: {
           trigger: screenRef.current,
-          start: "top 40%", // Trigger animation when top of the section hits 60% of viewport height
+          start: "top 40%",
         },
       })
       .to(
@@ -37,10 +37,10 @@ const Screen = () => {
           ref7.current,
         ],
         {
-          y: 0, // Move elements into view
+          y: 0,
           duration: 0.9,
           ease: "power4.out",
-          stagger: 0.1, // Stagger animation by 0.1 seconds
+          stagger: 0.1,
         }
       );
   }, []);
@@ -99,11 +99,6 @@ const Screen = () => {
             des ingredients
           </span>
         </p>
-        {/* <p className="overflow-hidden">
-          <div ref={ref7} className="translate-y-full">
-            efzijfez
-          </div>
-        </p> */}
       </div>
     </div>
   );
