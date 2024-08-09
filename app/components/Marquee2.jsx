@@ -92,14 +92,14 @@ const Marquee2 = () => {
         <div ref={slider} className="relative whitespace-nowrap">
           <p className="relative pr-5 m-0 uppercase text-7xl" ref={firstText}>
             {" "}
-            blackbird studio - blackbird studio - blackbird studio -
+            breizh cola - breizh cola - breizh cola - breizh cola -
           </p>
           <p
             className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase"
             ref={secondText}
           >
             {" "}
-            blackbird studio - blackbird studio - blackbird studio -
+            breizh cola - breizh cola - breizh cola - breizh cola -
           </p>
         </div>
       </div>
