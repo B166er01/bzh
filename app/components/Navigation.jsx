@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import Menu from "./Menu";
+import Menu from "./sections/Menu";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);

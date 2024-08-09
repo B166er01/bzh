@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import MagneticButtons from "./MagneticButtons";
+import MagneticButtons from "../MagneticButtons";
 
 const Footer = () => {
   return (

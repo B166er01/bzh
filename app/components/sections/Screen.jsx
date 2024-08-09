@@ -3,8 +3,8 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import BreizhCola from "./BreizhCola";
-import MagneticButtons from "./MagneticButtons";
+import BreizhCola from "../experience/view/BreizhCola";
+import MagneticButtons from "../MagneticButtons";
 
 gsap.registerPlugin(ScrollTrigger);
 
