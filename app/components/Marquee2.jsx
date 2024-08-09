@@ -89,17 +89,19 @@ const Marquee2 = () => {
   return (
     <div className="relative flex h-[50vh] w-full overflow-hidden ">
       <div className="absolute z-10 -translate-x-3 top-2/4 border-y-2 rotate-3 border-skin-border">
-        <div ref={slider} className="relative whitespace-nowrap">
-          <p className="relative pr-5 m-0 uppercase text-7xl" ref={firstText}>
+        <div ref={slider} className="relative whitespace-nowrap font-creamCake">
+          <p className="relative pr-5 m-0 capitalize text-8xl" ref={firstText}>
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
+            -
           </p>
           <p
-            className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase"
+            className="absolute top-0 left-[100%] m-0 text-8xl pr-5 capitalize"
             ref={secondText}
           >
             {" "}
-            breizh cola - breizh cola - breizh cola - breizh cola -
+            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
+            -
           </p>
         </div>
       </div>
