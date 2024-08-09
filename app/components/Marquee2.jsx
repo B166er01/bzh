@@ -96,7 +96,7 @@ const Marquee2 = () => {
           <p className="relative pr-5 m-0 capitalize text-8xl" ref={firstText}>
             {" "}
             breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
-            -
+            - breizh cola - breizh cola - breizh cola -
           </p>
           <p
             className="absolute top-0 left-[100%] m-0 text-8xl pr-5 capitalize"
@@ -104,7 +104,7 @@ const Marquee2 = () => {
           >
             {" "}
             breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
-            -
+            - breizh cola - breizh cola - breizh cola -
           </p>
         </div>
       </div>
