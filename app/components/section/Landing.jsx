@@ -2,6 +2,10 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import BreizhHome from "../experience/view/BreizhHome";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
   const titleRef = useRef(null);
@@ -12,11 +16,29 @@ const Landing = () => {
   const title6Ref = useRef(null);
   const title7Ref = useRef(null);
 
-  useEffect(() => {
+  const landingRef = useRef(null);
+  const bottleRef = useRef(null);
+
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: landingRef.current,
+        scrub: true,
+        // pinSpacing: true,
+        // pinSpacer: true,
+        pin: true,
+        pinSpacer: false,
+        pinSpacing: true, // If you don't want the extra space
+        start: "top top",
+        end: "bottom top",
+        // markers: true,
+      },
+    });
+
     gsap
       .timeline({
         onComplete: () => {
-          document.body.style.overflow = "auto";
+          document.body.style.overflowY = "auto";
         },
       })
 
@@ -42,6 +64,7 @@ const Landing = () => {
 
   return (
     <div
+      ref={landingRef}
       id="landing"
       className="relative flex flex-col justify-center w-full h-screen pt-20 overflow-hidden font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
     >

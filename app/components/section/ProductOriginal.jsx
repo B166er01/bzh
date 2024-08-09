@@ -22,8 +22,10 @@ const ProductOriginal = () => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: screenRef.current,
+          trigger: "#blue",
           start: "top 40%",
+          // end: "top 40%",
+          markers: true,
         },
       })
       .to(
