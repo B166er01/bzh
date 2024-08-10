@@ -23,7 +23,6 @@ export function B1(props) {
       dispose={null}
       scale={83}
       position={[50, -37, 0]}
-      id="zz"
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.161}>
         <mesh
