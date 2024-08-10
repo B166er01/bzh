@@ -48,19 +48,21 @@ const Marquee = () => {
   };
 
   return (
-    <div className="relative flex h-[20vh] w-full overflow-hidden bg-myWhite">
+    <div className="relative flex h-[25vh] w-full overflow-hidden bg-myWhite">
       <div className="absolute z-10 -translate-x-3 top-2/4 border-y-2 border-skin-border border-myRed text-myRed">
-        <div ref={slider} className="relative whitespace-nowrap">
-          <p className="relative pr-5 m-0 uppercase text-7xl" ref={firstText}>
+        <div
+          ref={slider}
+          className="relative capitalize whitespace-nowrap text-8xl font-creamCake"
+        >
+          <p className="relative pr-5 m-0 " ref={firstText}>
             {" "}
-            blackbird studio - blackbird studio - blackbird studio -
+            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
+            -
           </p>
-          <p
-            className="absolute top-0 left-[100%] m-0 text-7xl pr-5 uppercase"
-            ref={secondText}
-          >
+          <p className="absolute top-0 left-[100%] m-0 pr-5 " ref={secondText}>
             {" "}
-            blackbird studio - blackbird studio - blackbird studio -
+            breizh cola - breizh cola - breizh cola - breizh cola - breizh cola
+            -
           </p>
         </div>
       </div>
