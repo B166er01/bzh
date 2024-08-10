@@ -1,76 +1,60 @@
-import React from "react";
-import BreizhZero from "./BreizhZero";
-const Screen = () => {
-  return (
-    <div id="blue" className="relative w-full h-screen p-12 bg-myWhite">
-      <ul className="flex gap-5">
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            matieres grasses
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>{" "}
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>{" "}
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>{" "}
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>{" "}
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>{" "}
-        <li className="relative w-32 h-48 rounded-md bg-myRed ">
-          <p className="flex items-center justify-center w-full text-2xl capitalize h-1/2 text-myWhite">
-            energie
-          </p>
-          <div className="absolute flex justify-center pt-6 text-xl origin-center rounded-full left-2 -bottom-14 bg-myWhite w-28 h-28">
-            123 kcal
-          </div>
-        </li>
-      </ul>
+"use client";
+import { Environment, Float, OrthographicCamera } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useEffect, useRef } from "react";
+import { B1 } from "../models/B1";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-      {/* <h3 className="capitalize text-myRed">valeurs nutritionnelles</h3>
-        <ul className="flex gap-3">
-          <li className="relative bg-myRed">
-            <p className="text-myWhite">energie</p>
-          </li>
-        </ul> */}
-      <BreizhZero />
+const BreizhHome = () => {
+  const cameraRef = useRef(null);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (cameraRef.current) {
+        console.log("Camera successfully mounted:", cameraRef.current);
+        // Example of a GSAP animation
+        gsap.to(cameraRef.current, {
+          zoom: 25,
+          duration: 2,
+          ease: "power2.inOut",
+          onUpdate: () => cameraRef.current.updateProjectionMatrix(),
+        });
+      } else {
+        console.warn("Camera reference is still null.");
+      }
+    }, 1000); // 1-second delay for debugging
+
+    return () => clearTimeout(timeoutId); // Cleanup timeout if the component unmounts
+  }, []);
+
+  return (
+    <div
+      className="absolute z-20 w-full h-screen pointer-events-none"
+      id="titi"
+      style={{ pointerEvents: "none" }}
+    >
+      <Canvas style={{ pointerEvents: "none" }} className="pointer-events-none">
+        <Suspense>
+          <Environment preset="sunset" />
+          <OrthographicCamera
+            ref={cameraRef}
+            makeDefault
+            zoom={15}
+            position={[0, 0, 50]}
+          />
+          <Float
+            speed={3} // Animation speed, defaults to 1
+            rotationIntensity={1} // XYZ rotation intensity, defaults to 1
+            floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+            floatingRange={[0.2, 1]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+          >
+            <B1 />
+          </Float>
+        </Suspense>
+      </Canvas>
     </div>
   );
 };
 
-export default Screen;
+export default BreizhHome;
