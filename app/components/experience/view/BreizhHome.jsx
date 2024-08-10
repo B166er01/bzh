@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef } from "react";
 import { B1 } from "../models/B1";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const BreizhHome = () => {
   const cameraRef = useRef(null);
