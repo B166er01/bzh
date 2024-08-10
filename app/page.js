@@ -12,7 +12,7 @@ export default function Home() {
       <Navigation />
       <LoadingAnimation />
       <Landing />
-      {/* <Screen /> */}
+      <Screen />
 
       <ProductOriginal />
       <Marquee />

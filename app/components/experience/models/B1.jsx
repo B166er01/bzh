@@ -26,7 +26,7 @@ export function B1(props) {
         end: "bottom top",
         pinSpacer: true,
         pinSpacing: true,
-        scrub: true,
+        scrub: 0.9,
       },
     });
     tl.to(b1Ref.current.position, {

@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +11,7 @@ export function BottleCoca(props) {
   const bottleRef = useRef();
   const { nodes, materials } = useGLTF("/model/bottleCoca.glb");
 
-  useEffect(() => {
+  useGSAP(() => {
     if (bottleRef.current) {
       gsap.to(bottleRef.current.position, {
         x: 68, // Target x position
@@ -30,7 +31,7 @@ export function BottleCoca(props) {
         duration: 1.5, // Duration of the animation
       });
     }
-  }, []);
+  });
 
   return (
     <group

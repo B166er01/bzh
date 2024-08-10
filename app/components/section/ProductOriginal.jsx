@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import MagneticButtons from "../MagneticButtons";
 import BreizhCola from "../experience/view/BreizhCola";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,14 +19,13 @@ const ProductOriginal = () => {
   const ref7 = useRef(null);
   const screenRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#blue",
+          trigger: screenRef.current,
           start: "top 40%",
-          // end: "top 40%",
-          //  markers: true,
+          markers: true,
         },
       })
       .to(
@@ -45,7 +45,7 @@ const ProductOriginal = () => {
           stagger: 0.1,
         }
       );
-  }, []);
+  });
 
   return (
     <div
