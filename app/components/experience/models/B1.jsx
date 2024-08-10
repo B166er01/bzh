@@ -25,6 +25,7 @@ export function B1(props) {
         start: "top top",
         end: "bottom top",
         pinSpacer: true,
+        pinSpacing: true,
         scrub: true,
       },
     });
