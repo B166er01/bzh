@@ -8,17 +8,8 @@ import { useGSAP } from "@gsap/react";
 const BreizhHome = () => {
   const cameraRef = useRef(null);
   useEffect(() => {
-    if (cameraRef.current) {
-      console.log("Camera:", cameraRef.current);
-      // Example of a GSAP animation
-      gsap.to(cameraRef.current, {
-        zoom: 25,
-        duration: 2,
-        ease: "power2.inOut",
-        onUpdate: () => cameraRef.current.updateProjectionMatrix(),
-      });
-    }
-  }, [cameraRef.current]); // Dependency array to re-run when cameraRef.current is set
+    console.log(cameraRef.current);
+  }, [cameraRef.current]);
   return (
     <div
       className="absolute z-20 w-full h-screen pointer-events-none"
