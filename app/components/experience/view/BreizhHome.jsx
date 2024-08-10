@@ -8,8 +8,23 @@ import { useGSAP } from "@gsap/react";
 const BreizhHome = () => {
   const cameraRef = useRef(null);
   useEffect(() => {
-    console.log(cameraRef.current);
-  }, [cameraRef.current]);
+    const timeoutId = setTimeout(() => {
+      if (cameraRef.current) {
+        console.log("Camera successfully mounted:", cameraRef.current);
+        // Example of a GSAP animation
+        gsap.to(cameraRef.current, {
+          zoom: 35,
+          duration: 2,
+          ease: "power2.inOut",
+          onUpdate: () => cameraRef.current.updateProjectionMatrix(),
+        });
+      } else {
+        console.warn("Camera reference is still null.");
+      }
+    }, 1000); // 1-second delay for debugging
+
+    return () => clearTimeout(timeoutId); // Cleanup timeout if the component unmounts
+  }, []);
   return (
     <div
       className="absolute z-20 w-full h-screen pointer-events-none"
