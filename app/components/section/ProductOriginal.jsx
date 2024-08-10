@@ -25,7 +25,7 @@ const ProductOriginal = () => {
         scrollTrigger: {
           trigger: screenRef.current,
           start: "top 40%",
-          markers: true,
+          // markers: true,
         },
       })
       .to(
