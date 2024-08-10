@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/section/Footer";
 import Landing from "./components/section/Landing";
 import ProductOriginal from "./components/section/ProductOriginal";
-import Screen from "./components/section/Screen";
+import PinSpacer from "./components/section/PinSpacer";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Navigation />
       <LoadingAnimation />
       <Landing />
-      <Screen />
+      <PinSpacer />
 
       <ProductOriginal />
       <Marquee />

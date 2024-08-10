@@ -1,7 +1,7 @@
 import React from "react";
 
-const Screen = () => {
+const PinSpacer = () => {
   return <div className="w-full h-screen bg-pink-800">Screen</div>;
 };
 
-export default Screen;
+export default PinSpacer;
