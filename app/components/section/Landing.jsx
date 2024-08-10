@@ -17,19 +17,9 @@ const Landing = () => {
   const title7Ref = useRef(null);
 
   const landingRef = useRef(null);
-  const bottleRef = useRef(null);
+  const b1Ref = useRef(null);
 
   useGSAP(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: landingRef.current,
-        pin: true,
-        start: "top top",
-        end: "bottom top",
-        pinSpacer: false,
-      },
-    });
-
     gsap
       .timeline({
         onComplete: () => {
@@ -63,7 +53,7 @@ const Landing = () => {
       id="landing"
       className="relative flex flex-col justify-center w-full h-screen pt-20 overflow-hidden font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
     >
-      <BreizhHome />
+      <BreizhHome b1ref={b1Ref} />
       <div className="flex overflow-hidden">
         <div
           ref={titleRef}
