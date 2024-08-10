@@ -29,9 +29,14 @@ export function B1(props) {
         scrub: 0.9,
       },
     });
-    tl.to(b1Ref.current.position, {
-      x: 0,
-    });
+    tl.to(
+      b1Ref.current.position,
+      {
+        x: 0,
+      },
+      "one"
+    );
+    tl.to(b1Ref.current.scale, { x: 120, y: 120, z: 120 }, "one");
   });
 
   return (
