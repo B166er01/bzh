@@ -51,10 +51,10 @@ const Landing = () => {
     <div
       ref={landingRef}
       id="landing"
-      className="relative flex flex-col justify-center w-full h-screen pt-20 overflow-hidden font-bold uppercase font-poppins pl-28 bg-myRed text-myWhite"
+      className="relative flex flex-col justify-center w-full h-screen overflow-hidden font-bold uppercase font-poppins bg-myRed text-myWhite"
     >
       <BreizhHome b1ref={b1Ref} />
-      <div className="flex overflow-hidden">
+      <div className="flex overflow-hidden pl-28">
         <div
           ref={titleRef}
           className="inline translate-y-full text-[150px] pr-20"

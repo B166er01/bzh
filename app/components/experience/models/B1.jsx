@@ -32,11 +32,22 @@ export function B1(props) {
     tl.to(
       b1Ref.current.position,
       {
-        x: 0,
+        x: 40,
+        y: -26,
+        z: 0,
       },
       "one"
     );
-    tl.to(b1Ref.current.scale, { x: 120, y: 120, z: 120 }, "one");
+    tl.to(b1Ref.current.scale, { x: 55, y: 55, z: 55 }, "one");
+    tl.to(
+      b1Ref.current.rotation,
+      {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      "one"
+    );
   });
 
   return (
@@ -44,8 +55,9 @@ export function B1(props) {
       ref={b1Ref}
       {...props}
       dispose={null}
-      scale={83}
-      position={[50, -37, 0]}
+      scale={260}
+      position={[-100, 37, 0]}
+      rotation={[Math.PI / 3.5, Math.PI / 1.2, Math.PI / 8]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.161}>
         <mesh
