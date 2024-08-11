@@ -9,7 +9,7 @@ import PinSpacer from "./components/section/PinSpacer";
 export default function Home() {
   return (
     <main className="">
-      <Navigation />
+    
       <LoadingAnimation />
       <Landing />
       {/* <PinSpacer /> */}

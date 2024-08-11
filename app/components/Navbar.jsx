@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import { Menu } from "lucide-react";
 import { useEffect, useRef } from "react";
+import AnimatedLink from "./AnimatedLink";
 
 const Navbar = ({ setMenuOpen }) => {
   const navRef = useRef(null);
@@ -58,8 +59,11 @@ const Navbar = ({ setMenuOpen }) => {
         <div className="ml-3">Breizh Cola</div>
       </a>
 
-      <div onClick={() => setMenuOpen(true)} className="cursor-pointer">
-        <Menu className="w-10 h-10 " />
+      <div className="flex items-center justify-center">
+        <AnimatedLink href="/product/zero">work</AnimatedLink>
+        <div onClick={() => setMenuOpen(true)} className="cursor-pointer">
+          <Menu className="w-10 h-10 " />
+        </div>
       </div>
     </nav>
   );
